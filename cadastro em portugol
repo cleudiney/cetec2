@@ -1,0 +1,74 @@
+
+/* CLIQUE NO SINAL DE "+", À ESQUERDA, PARA EXIBIR A DESCRIÇÃO DO EXEMPLO
+ *  
+ * Copyright (C) 2014 - UNIVALI - Universidade do Vale do Itajaí
+ * 
+ * Este arquivo de código fonte é livre para utilização, cópia e/ou modificação
+ * desde que este cabeçalho, contendo os direitos autorais e a descrição do programa, 
+ * seja mantido.
+ * 
+ * Se tiver dificuldade em compreender este exemplo, acesse as vídeoaulas do Portugol 
+ * Studio para auxiliá-lo:
+ * 
+ * https://www.youtube.com/watch?v=K02TnB3IGnQ&list=PLb9yvNDCid3jQAEbNoPHtPR0SWwmRSM-t
+ * 
+ * Descrição:
+ * 
+ * 	Este exemplo cria e preenche um vetor com números aleatórios. Logo após exibe o vetor
+ * 	no console de duas formas diferentes:
+ * 	
+ * 		a) Na ordem em que os números foram preenchidos
+ * 		b) Na ordem inversa em que os números foram preenchidos
+ * 	
+ * Autores:
+ * 
+ * 	Giordana Maria da Costa Valle
+ * 	Carlos Alexandre Krueger
+ * 	
+ * Data: 01/06/2013
+ */
+
+programa
+{
+	//for == para
+	const inteiro num_alunos=2 
+	
+	funcao inicio() 
+	{
+		inteiro matricula[num_alunos], nr_matricula=0
+		cadeia nome[num_alunos], sobrenome[num_alunos], nome_aluno, sobren_aluno
+		real nota_1[num_alunos],nota_2[num_alunos],nota_3[num_alunos],media_alunos[num_alunos]
+		// preenche o vetor
+		para (inteiro posicao = 0; posicao < num_alunos; posicao++)
+		{
+			escreva("\nUsuario digite o numero da matricula do aluno: \n ")
+			leia(nr_matricula)
+			matricula[posicao] = nr_matricula // Sorteia um número e atribui à posição do vetor
+			escreva("Usuario digite o nome do aluno: \n ")
+			leia(nome_aluno)
+			nome[posicao]=nome_aluno
+			escreva("Usuario digite o sobrenome do aluno: \n ")
+			leia(sobren_aluno)
+			sobrenome[posicao]=sobren_aluno	
+			limpa()		
+		}
+		
+
+		// Exibe o vetor na ordem original
+		escreva ("Vetor na ordem original:\n")
+		
+		para(inteiro posicao = 0; posicao < num_alunos; posicao++)
+		{
+			escreva (matricula[posicao], " ")
+		}
+		
+		// Exibe o vetor na ordem inversa
+		escreva ("\n\nVetor na ordem inversa:\n")
+		
+		para(inteiro posicao = num_alunos; posicao >=0; posicao--)
+		{
+			escreva (matricula[posicao], " ")
+		}
+	}
+}
+
